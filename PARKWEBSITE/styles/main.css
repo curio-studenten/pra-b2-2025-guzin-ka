@@ -116,6 +116,15 @@ article h2 {
     -1px 1px 0 #FCFCFC,
     1px 1px 0 #FCFCFC;
 }
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Twee gelijke kolommen */
+  column-gap: 50px;  /* 50px ruimte tussen de kolommen */
+  row-gap: 20px;  /* Optioneel, ruimte tussen de rijen */
+}
+
+
+
 
 article h2.fun-for-family {
   background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
@@ -200,8 +209,11 @@ footer {
     width: 128px;
   }
   
-  .row {
-    flex-direction: column;
+  @media (max-width: 768px) {
+    .row {
+      grid-template-columns: 1fr;  /* Eén kolom op kleinere schermen */
+      flex-direction: column;
+    }
   }
   
   .sidy-by-side {
