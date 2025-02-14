@@ -197,4 +197,16 @@ footer {
     align-items: center;
   }
 }
+.row {
+  display: grid; /* Zet de container in grid mode */
+  grid-template-columns: repeat(2, 1fr); /* Maakt twee gelijke kolommen */
+  gap: 16px; /* Voeg ruimte toe tussen de grid-items */
+  margin: 0 -8px; /* Compenseer de padding aan de zijkanten van de kolommen */
+}
+ 
+.row .product {
+  background-color: lightgray; /* Voeg een achtergrond toe voor zichtbaarheid */
+  padding: 16px;
+  text-align: center;
+}
 
