@@ -201,6 +201,25 @@ article h2.open-forever {
   text-align: left;
 }
 
+/* Mobile - Stack Image and Text */
+@media (max-width: 480px) {
+  .product-placement {
+    flex-direction: column; /* Stack the image and text vertically on small screens */
+    align-items: center;
+  }
+
+  .product-placement img {
+    max-width: 90%; /* Adjust the image width for mobile */
+    margin-bottom: 15px; /* Add space between image and text */
+  }
+
+  .product-description {
+    max-width: 100%; /* Make description take full width on mobile */
+    text-align: center; /* Center-align text */
+    padding: 15px;
+  }
+}
+
 button {
   width: 100%;
   margin-top: 1em;
