@@ -70,6 +70,7 @@ p, span {
 main {
   padding: 1em;
 }
+
 /* Side-by-side Grid Layout */
 .side-by-side {
   display: grid;
@@ -101,7 +102,6 @@ main {
     grid-template-columns: 1fr;  /* Single column for small screens */
   }
 }
-
 
 .articles-container {
   display: flex;
@@ -176,6 +176,29 @@ article h2.open-forever {
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
+}
+
+/* Styling for product-placement */
+.product-placement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.product-placement img {
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-description {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 button {
