@@ -214,4 +214,38 @@ footer {
   font-display: swap;
 }
 
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
+.cart-table th {
+  background-color: #f5f5f5;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #27AE60;
+}
+
+.cart-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-table tr:last-child td {
+  border-bottom: none;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.price-column {
+  text-align: right;
+}
+
+.quantity-column {
+  text-align: center;
+}

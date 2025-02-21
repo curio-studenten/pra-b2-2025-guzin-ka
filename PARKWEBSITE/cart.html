@@ -22,9 +22,41 @@
         <h2>Winkelwagentje</h2>
         <div>
           <span>Dit zijn alle producten die u gaat bestellen. Controleer een laatste keer of alles klopt en ga daarna verder met de grote groene knop.</span>
-          <!-- 
-            Winkelwagen hier
-          -->
+          
+          <table class="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Prijs (enkel)</th>
+                <th>Aantal</th>
+                <th>Prijs (totaal)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Entreekaartje Kind t/m 3 jaar</td>
+                <td class="price-column">€ 0</td>
+                <td class="quantity-column">1</td>
+                <td class="price-column">€ 0</td>
+              </tr>
+              <tr>
+                <td>Entreekaartje Regulier</td>
+                <td class="price-column">€ 24,95</td>
+                <td class="quantity-column">2</td>
+                <td class="price-column">€ 49,90</td>
+              </tr>
+              <tr>
+                <td>Entreekaartje Senior</td>
+                <td class="price-column">€ 14,95</td>
+                <td class="quantity-column">1</td>
+                <td class="price-column">€ 14,95</td>
+              </tr>
+              <tr class="total-row">
+                <td colspan="3">Totaalsom (incl. btw)</td>
+                <td class="price-column">€ 64,85</td>
+              </tr>
+            </tbody>
+          </table>
           
           <button>Dit is correct, verder naar betaling</button>
         </div>
@@ -34,7 +66,7 @@
   <footer>
     <div class="wrapper">
       <div class="copyright">
-        &copy; 2020 - 2021  DeveloperLand&nbsp;&nbsp;All Rights Reserved
+        &copy; 2020 - 2021 DeveloperLand&nbsp;&nbsp;All Rights Reserved
       </div>
     </div>
   </footer>
