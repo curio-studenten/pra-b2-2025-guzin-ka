@@ -214,4 +214,9 @@ footer {
   font-display: swap;
 }
 
-
+/* Mobile logo visibility tweak */
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+}
