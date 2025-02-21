@@ -62,7 +62,7 @@ h2 {
   padding-left: 10px;
 }
 
-p, span{
+p, span {
   font-family: 'Heartbeat';
   font-size: 25px;
 }
@@ -70,11 +70,42 @@ p, span{
 main {
   padding: 1em;
 }
+/* Side-by-side Grid Layout */
+.side-by-side {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* Creates 4 equal columns */
+  gap: 1em;  /* Spacing between grid items */
+  align-items: center;  /* Align items vertically */
+}
+
+.side-by-side div {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-option {
+  width: 100px;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Adjust the grid for smaller screens */
+  .side-by-side {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns for medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Stack grid items into a single column for small screens */
+  .side-by-side {
+    grid-template-columns: 1fr;  /* Single column for small screens */
+  }
+}
+
 
 .articles-container {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
   flex-wrap: wrap;
 }
 
@@ -101,6 +132,7 @@ article h2 {
     1px 1px 0 #FCFCFC;
 }
 
+/* Grid for Product Listings */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -108,6 +140,7 @@ article h2 {
   row-gap: 20px;
 }
 
+/* Specifieke achtergrondbeelden voor verschillende secties */
 article h2.fun-for-family {
   background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
 }
@@ -199,8 +232,21 @@ footer {
     width: 100%;
     margin: 0;
   }
+
+  /* Make header full width on smaller screens */
+  header {
+    background-size: cover;
+    background-position: center;
+    background-color: #CCCCCC;
+  }
+
+  /* Adjust text size and padding for small screens */
+  h2, p, span {
+    font-size: 18px;
+  }
 }
 
+/* Font Face for Heartbeat */
 @font-face {
   font-family: 'Heartbeat';
   src: url('../fonts/heartbeat.eot'); 
@@ -214,9 +260,4 @@ footer {
   font-display: swap;
 }
 
-/* Mobile logo visibility tweak */
-@media (max-width: 480px) {
-  .logo {
-    display: none;
-  }
-}
+
