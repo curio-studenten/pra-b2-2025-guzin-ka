@@ -1,18 +1,4 @@
-/* Emphasize Class */
-.emphasize {
-  border-left: 5px solid #27AE60;
-  box-shadow: 1px 0px 10px rgba(39, 174, 96, 0.5);
-  padding: 1em;
-}
-
-.emphasize h2 {
-  margin: 0;
-  border-left: none;
-  text-align: center;
-  color: #27AE60;
-}
-
-/* Algemene stijlen */
+/* General Styles */
 body, html {
   margin: 0;
   padding: 0;
@@ -26,6 +12,30 @@ body, html {
   margin: 0 auto;
 }
 
+h1 {
+  margin: 0;
+  font-family: 'Heartbeat';
+  color: #27AE60;
+  text-shadow: 3px 3px 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
+}
+
+h2 {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 5px solid #27AE60;
+  text-align: center;
+}
+
+p, span {
+  font-family: 'Heartbeat';
+  font-size: 25px;
+}
+
+main {
+  padding: 1em;
+}
+
+/* Header Styles */
 header {
   background: url('../images/park01.jpg');
   background-size: cover;
@@ -45,36 +55,42 @@ header {
   width: 512px;
 }
 
-h1 {
-  margin: 0;
-  font-family: 'Heartbeat';
-  color: #27AE60;
-  text-shadow: 
-    3px 3px 0 #FCFCFC,
-    -1px -1px 0 #FCFCFC,  
-    1px -1px 0 #FCFCFC,
-    -1px 1px 0 #FCFCFC,
-    1px 1px 0 #FCFCFC;
-}
-
-h2 {
+/* Emphasize Class */
+.emphasize {
   border-left: 5px solid #27AE60;
-  padding-left: 10px;
-}
-
-p, span{
-  font-family: 'Heartbeat';
-  font-size: 25px;
-}
-
-main {
+  box-shadow: 1px 0px 10px rgba(39, 174, 96, 0.5);
   padding: 1em;
 }
 
+.emphasize h2 {
+  margin: 0;
+  border-left: none;
+  text-align: center;
+  color: #27AE60;
+}
+
+/* Grid Layout */
+.side-by-side {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  align-items: center;
+}
+
+.side-by-side div {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-option {
+  width: 100px;
+  max-width: 100%;
+}
+
+/* Articles Container */
 .articles-container {
   display: flex;
   justify-content: space-between;
-  gap: 1em;
   flex-wrap: wrap;
 }
 
@@ -93,35 +109,15 @@ article h2 {
   background-position: center;
   background-size: cover;
   text-align: center;
-  text-shadow: 
-    0 0 0 #FCFCFC,
-    -1px -1px 0 #FCFCFC,  
-    1px -1px 0 #FCFCFC,
-    -1px 1px 0 #FCFCFC,
-    1px 1px 0 #FCFCFC;
+  text-shadow: 0 0 0 #FCFCFC, -1px -1px 0 #FCFCFC, 1px -1px 0 #FCFCFC, -1px 1px 0 #FCFCFC, 1px 1px 0 #FCFCFC;
 }
 
+/* Product Listings */
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 50px;
   row-gap: 20px;
-}
-
-article h2.fun-for-family {
-  background-image: url('../images/family-fun-george-arthur-pflueger.jpg');
-}
-
-article h2.accessibility {
-  background-image: url('../images/accessible-eunice-stahl.jpg');
-}
-
-article h2.rides {
-  background-image: url('../images/drone-drew-dau.jpg');
-}
-
-article h2.open-forever {
-  background-image: url('../images/open-james-lee.jpg');
 }
 
 .product {
@@ -145,6 +141,7 @@ article h2.open-forever {
   margin: 0 auto;
 }
 
+/* Button Styles */
 button {
   width: 100%;
   margin-top: 1em;
@@ -156,10 +153,7 @@ button {
   cursor: pointer;
 }
 
-.description {
-  flex: 1;
-}
-
+/* Footer */
 footer {
   padding: 1em;
   background: #303030;
@@ -171,7 +165,17 @@ footer {
 }
 
 /* Media Queries */
+@media (max-width: 768px) {
+  .side-by-side {
+    grid-template-columns: repeat(2, 1fr);  /* 2 columns for medium screens */
+  }
+}
+
 @media (max-width: 480px) {
+  .side-by-side {
+    grid-template-columns: 1fr;  /* Single column for small screens */
+  }
+
   .logo {
     display: none;
   }
@@ -188,32 +192,41 @@ footer {
     display: none;
   }
 
-  /* Stacks the grid into 1 column */
   .grid {
-    grid-template-columns: 1fr;  /* Single column */
+    grid-template-columns: 1fr;  /* Single column for smaller screens */
   }
 
-  /* Remove wrapper so header spans full width */
   .wrapper {
     max-width: none;
     width: 100%;
     margin: 0;
   }
+
+  header {
+    background-size: cover;
+    background-position: center;
+  }
+
+  h2, p, span {
+    font-size: 18px;
+  }
 }
 
+/* Font Face for Heartbeat */
 @font-face {
   font-family: 'Heartbeat';
   src: url('../fonts/heartbeat.eot'); 
-  src: url('../fonts/heartbeat.eot?#iefix') format('embedded-opentype'), 
-       url('../fonts/heartbeat.woff2') format('woff2'), 
-       url('../fonts/heartbeat.woff') format('woff'), 
-       url('../fonts/heartbeat.ttf') format('truetype'), 
-       url('../fonts/heartbeat.svg#Heartbeat') format('svg'); 
+  src: url('../fonts/heartbeat.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/heartbeat.woff2') format('woff2'),
+       url('../fonts/heartbeat.woff') format('woff'),
+       url('../fonts/heartbeat.ttf') format('truetype'),
+       url('../fonts/heartbeat.svg#Heartbeat') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+/* Cart Table Styles */
 .cart-table {
   width: 100%;
   border-collapse: collapse;
@@ -249,3 +262,4 @@ footer {
 .quantity-column {
   text-align: center;
 }
+
